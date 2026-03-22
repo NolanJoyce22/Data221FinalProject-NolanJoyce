@@ -25,8 +25,14 @@ model = LinearRegression()
 model.fit(x_train, y_train)
 # Initialize model and set fit_intercept to......
 linear_regression_model = LinearRegression(fit_intercept= True)
+# Predict the target labels
+y_pred = model.predict(x_test)
 
+print(y_pred)
+print("R²:", r2_score(y_test, y_pred))
+print("MSE:", mean_squared_error(y_test, y_pred))
 
+print(x.isnull().sum())
 
 
 
